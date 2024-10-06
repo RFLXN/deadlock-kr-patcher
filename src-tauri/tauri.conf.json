@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "deadlock-kr-patcher",
+  "version": "0.1.0",
+  "identifier": "com.deadlock-kr-patcher.app",
+  "build": {
+    "beforeDevCommand": "yarn dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "yarn build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "데드락 한글패치",
+        "width": 1024,
+        "height": 576,
+        "resizable": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon-512.png",
+      "icons/icon-192.png",
+      "icons/icon.ico"
+    ]
+  }
+}
